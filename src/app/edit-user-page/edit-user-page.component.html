@@ -1,0 +1,124 @@
+<div *ngIf="addStatus; else edit">
+
+    <h2 class="h2">Add User Form</h2>
+    <hr class="hr">
+
+    <div>
+        <button class="button1" mat-raised-button (click)="back()">Back</button>
+
+    </div>
+
+    <div class="mainContainer">
+        <div class="inputName">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Enter Name" [(ngModel)]="nameValue">
+            </mat-form-field>
+            <div class="error">{{nameError}}</div>
+
+        </div>
+        <div>
+
+            <mat-form-field>
+                <mat-label>Profile Image URL</mat-label>
+                <input matInput placeholder="Enter Profile Image URL" [(ngModel)]="urlValue">
+            </mat-form-field>
+            <div class="error">{{urlError}}</div>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Job</mat-label>
+                <mat-select [(ngModel)]="jobValue">
+                    <mat-option value="React Developer">React Developer</mat-option>
+                    <mat-option value="Tester">Tester</mat-option>
+                    <mat-option value="Angular Developer">Angular Developer</mat-option>
+                    <mat-option value="Vue Developer">Vue Developer</mat-option>
+                    <mat-option value="Back End Developer">Back End Developer</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="error">{{jobError}}</div>
+
+        </div>
+
+        <div>
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="genderValue">
+                <b>Gender</b>
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+            <div class="error">{{genderError}}</div>
+
+        </div>
+
+        <div>
+            <button class="button" mat-raised-button (click)="submitted()">Submit</button>
+
+        </div>
+
+    </div>
+    <hr class="hr">
+
+</div>
+
+
+<ng-template #edit>
+    <h2 class="h2">Edit User Form</h2>
+    <hr class="hr">
+
+    <div>
+        <button class="button1" mat-raised-button (click)="back()">Back</button>
+
+    </div>
+
+    <div class="mainContainer">
+
+        <div class="inputName">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Enter Name" [(ngModel)]="nameValue">
+            </mat-form-field>
+            <div class="error">{{nameError}}</div>
+
+        </div>
+        <div>
+
+            <mat-form-field>
+                <mat-label>Profile Image URL</mat-label>
+                <input matInput placeholder="Enter Profile Image URL" [(ngModel)]="urlValue">
+            </mat-form-field>
+            <div class="error">{{urlError}}</div>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Job</mat-label>
+                <mat-select [(ngModel)]="jobValue">
+                    <mat-option value="React Developer">React Developer</mat-option>
+                    <mat-option value="Tester">Tester</mat-option>
+                    <mat-option value="Angular Developer">Angular Developer</mat-option>
+                    <mat-option value="Vue Developer">Vue Developer</mat-option>
+                    <mat-option value="Back End Developer">Back End Developer</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="error">{{jobError}}</div>
+
+        </div>
+
+        <div>
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="genderValue">
+                <b>Gender</b>
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+            <div class="error">{{genderError}}</div>
+
+        </div>
+
+        <div>
+            <button class="button" mat-raised-button (click)="updatedSubmit()">Submit</button>
+
+        </div>
+
+    </div>
+    <hr class="hr">
+
+</ng-template>

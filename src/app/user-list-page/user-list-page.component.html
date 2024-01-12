@@ -1,0 +1,46 @@
+<div class="outline">
+  <div class="container1">
+    <div class="title">
+      <h1 class="h1">User List</h1>
+    </div>
+    <div>
+      <div class="button">
+        <button mat-raised-button color="primary" class="registerbutton" (click)="back()">Back</button>
+      </div>
+    </div>
+    <div>
+      <div class="Adduserbutton">
+        <button mat-raised-button color="primary" class="registerbutton1" (click)="addUser()">Add User</button>
+      </div>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="griditem1">
+      <mat-grid-list cols="4" rowHeight="1:1">
+        <mat-grid-tile onmouseover="this.style.cursor='pointer'" (click)="detailSubmit(dataas.username,dataas.url,dataas.job,dataas.gender,dataas.id,i)"
+          *ngFor="let dataas of data ;let i = index">
+          <mat-card class="example-card">
+            <div class="imageGap">
+              <img class="img" mat-card-md-image [src]=" dataas.url "
+                onerror="this.src='https://www.w3schools.com/howto/img_avatar.png'">
+            </div>
+            <mat-card-content>
+              <h1 class="h1">{{dataas.username}}</h1>
+              <h3 class="h3">{{dataas.job}}</h3>
+            </mat-card-content>
+            <mat-card-actions class="editbutton">
+              <button mat-raised-button class="registerbutton"
+                (click)="editedData(dataas.username,dataas.url,dataas.job,dataas.gender,dataas.id,i)">EDIT</button>
+              <button mat-raised-button color="warn" (click)="deletedDate(dataas.id,i)">DELETE</button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+  <div class="container3">
+    <div class="button">
+      <button mat-raised-button color="warn" (click)="quit()">Logout</button>
+    </div>
+  </div>
+</div>

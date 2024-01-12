@@ -1,0 +1,22 @@
+<div class="header">
+    <h1 class="h1">user Details</h1>
+</div>
+<div>
+    <button class="button" mat-raised-button (click)="back()">Back</button>
+</div>
+<div class="mainContainer">
+    <div class="leftContainer">
+        <div class="leftInnerContainer">
+            <h1 class="h1">{{Name}}</h1>
+            <h3>ID: {{id}}</h3>
+            <h3>{{job}}</h3>
+            <h3>Gender: {{gender}}</h3>
+        </div>
+    </div>
+    <div class="raightContainer">
+        <div class="raightInnerContainer">
+            <img class="profilePhoto" [src]="profileUrl ? profileUrl : 'https://www.w3schools.com/howto/img_avatar.png'"
+                onerror="this.src='https://www.w3schools.com/howto/img_avatar.png'">
+        </div>
+    </div>
+</div>

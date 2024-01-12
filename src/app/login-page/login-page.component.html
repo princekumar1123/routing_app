@@ -1,0 +1,32 @@
+<h2 class="h2">Login User</h2>
+<hr class="hr">
+
+<div class="mainContainer">
+    <img class="profilePhoto" [src]="url ? url : 'https://www.w3schools.com/howto/img_avatar.png'">
+    <div class="inputName">
+        <mat-form-field>
+            <mat-label>Email Address</mat-label>
+            <input matInput placeholder="Enter Email Address" [(ngModel)]="emailValue">
+        </mat-form-field>
+        <div class="error">{{emailError}}</div>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Enter Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="passwordValue">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="error">{{passwordError}}</div>
+    </div>
+    <div>
+        <button class="button" mat-raised-button (click)="submitted()">Login</button>
+
+    </div>
+</div>
+<div class="footerContent">
+    <h3>Don't have an account? <a class="a" onmouseover="this.style.cursor='pointer'" (click)="routingFunction()">Register</a></h3>
+</div>
+<hr class="hr">

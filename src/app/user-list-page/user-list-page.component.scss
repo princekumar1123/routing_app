@@ -1,0 +1,77 @@
+.outline {
+  background-color: rgb(204, 206, 211);
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 5%;
+}
+
+.container3 {
+  margin-top: 1%;
+  display: flex;
+  justify-content: end;
+  margin-right: 4%;
+}
+
+.button {
+  display: flex;
+  justify-content: start;
+  margin-left: 4%;
+
+
+}
+
+.Adduserbutton {
+  display: flex;
+
+  justify-content: end;
+  margin-right: 4%;
+
+}
+
+.imageGap {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 1%;
+  font-weight: bold;
+}
+
+.registerbutton {
+  color: white !important;
+  background-color: #15a6bb !important;
+  margin-right: 3%;
+}
+
+.registerbutton1 {
+  color: white !important;
+  background-color: #0d7af5 !important;
+}
+
+.h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: -5px;
+  color: #293e1a;
+
+}
+
+.h3 {
+  text-align: center;
+}
+
+img {
+  height: 180px;
+  width: 250px;
+
+}
+
+.editbutton {
+  justify-content: center;
+}
+
